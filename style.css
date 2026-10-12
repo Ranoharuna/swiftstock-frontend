@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SwiftStock - Small Business Manager</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <h1>SwiftStock Manager</h1>
+        <nav>
+            <button onclick="switchTab('inventory')" class="tab-btn active">Inventory</button>
+            <button onclick="switchTab('invoice')" class="tab-btn">Create Invoice</button>
+        </nav>
+    </header>
+
+    <main>
+        <!-- Inventory Section -->
+        <section id="inventory-section" class="tab-content">
+            <h2>Manage Inventory</h2>
+            <form id="product-form" onsubmit="addProduct(event)">
+                <input type="text" id="product-name" placeholder="Item Name" required>
+                <input type="number" id="product-price" placeholder="Price (₦)" required min="1">
+                <input type="number" id="product-qty" placeholder="Quantity" required min="0">
+                <button type="submit">Add Product</button>
+            </form>
+
+            <table id="inventory-table">
+                <thead>
+                    <tr>
+                        <th>Item Name</th>
+                        <th>Price (₦)</th>
+                        <th>Quantity</th>
+                        <th>Status</th>
+                        <th>Action</th>
+                    </tr>
+                </thead>
+                <tbody id="inventory-list">
+                    <!-- Dynamic items go here -->
+                </tbody>
+            </table>
+        </section>
+
+        <!-- Invoice Section -->
+        <section id="invoice-section" class="tab-content" style="display:none;">
+            <h2>Generate Customer Invoice</h2>
+            <div class="invoice-box">
+                <label>Select Product:</label>
+                <select id="invoice-item-select"></select>
+                <input type="number" id="invoice-qty" placeholder="Quantity to buy" min="1" value="1">
+                <button onclick="addToInvoice()">Add to Bill</button>
+
+                <h3>Bill Summary</h3>
+                <ul id="bill-items"></ul>
+                <h3>Total: ₦<span id="bill-total">0</span></h3>
+                <button onclick="window.print()" class="print-btn">Print / Save Invoice</button>
+            </div>
+        </section>
+    </main>
+
+    <script src="app.js"></script>
+</body>
+</html>
