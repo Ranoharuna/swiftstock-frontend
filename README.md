@@ -1,5 +1,7 @@
-# swiftstock-frontend
 # SwiftStock - Small Business Inventory & Invoice Manager
+
+## Live Application
+You can access the live working prototype here: [https://ranoharuna.github.io/swiftstock-frontend/](https://ranoharuna.github.io/swiftstock-frontend/)
 
 ## Overview
 SwiftStock is a frontend web application designed for small and medium-sized enterprises (SMEs) to track inventory, monitor stock levels, and generate professional customer invoices digitally.
@@ -7,7 +9,7 @@ SwiftStock is a frontend web application designed for small and medium-sized ent
 ## Features
 - **Inventory Management:** Add, view, and delete product items with live stock tracking.
 - **Low-Stock Alerts:** Automatically flags items with low quantities.
-- **Invoice & POS Generator:** Select items, calculate totals automatically, and print/save invoices using browser-native PDF tools[cite: 1].
+- **Invoice & POS Generator:** Select items, calculate totals automatically, and print/save invoices using browser-native tools.
 - **Data Persistence:** Uses browser `localStorage` to retain data across sessions.
 
 ## Technologies Used
@@ -16,7 +18,7 @@ SwiftStock is a frontend web application designed for small and medium-sized ent
 - Deployment: GitHub Pages
 
 ## Setup and Usage Instructions
-1. Open the live deployment link: [Insert Your GitHub Pages Link Here]
+1. Open the live deployment link provided above.
 2. Navigate to the **Inventory** tab to add products.
 3. Switch to the **Create Invoice** tab to select products, build a bill, and click **Print / Save Invoice**.
 
